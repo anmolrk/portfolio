@@ -57,10 +57,10 @@ function themeMode(){
 
     if(localStorage.getItem("theme") !== null){
         if(localStorage.getItem("theme") === "light"){
-            document.body.classList.remove("dark");
+            document.body.classList.remove("dark");            
         }
         else{
-            document.body.classList.add("dark");
+            document.body.classList.add("dark");            
         }
     }
     updateIcon();
@@ -71,10 +71,12 @@ themeMode();
 function updateIcon(){
     if(document.body.classList.contains("dark")){
         dayNight.querySelector("i").classList.remove("fa-moon");
-        dayNight.querySelector("i").classList.add("fa-sun");        
+        dayNight.querySelector("i").classList.add("fa-sun"); 
+        document.querySelector(".logo").firstElementChild.firstElementChild.setAttribute("src","img/logo/logoPicW.png");       
     }
     else{
         dayNight.querySelector("i").classList.remove("fa-sun");
-        dayNight.querySelector("i").classList.add("fa-moon");        
+        dayNight.querySelector("i").classList.add("fa-moon");
+        document.querySelector(".logo").firstElementChild.firstElementChild.setAttribute("src","img/logo/logoPic.png");      
     }
 }
