@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "anmol-raj-kr"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
